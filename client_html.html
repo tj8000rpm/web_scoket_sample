@@ -1,0 +1,12 @@
+<html>
+<body>
+    <div>Test</div>
+    <div id="target"></div>
+    <script>
+        socket = new WebSocket("ws://192.168.122.252:9999/");
+        socket.onmessage = function(e){
+            document.getElementById("target").innerText=e.data+"\n"+document.getElementById("target").innerText;
+        }
+    </script>
+</body>
+</html>
